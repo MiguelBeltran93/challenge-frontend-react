@@ -1,18 +1,18 @@
-import {useState} from "react";
-import axios from "axios";
+import {useEffect, useState} from "react";
 import SearchBarComponent from "../commons/search-bar.component";
 import './box-search.component.css';
+import { useSelector, useDispatch } from 'react-redux';
+import {getProductsActionAsync} from "../../store";
 
 const BoxSearchComponent = () => {
+    const dispatch = useDispatch();
 
     const [state, setState] = useState();
 
   const searchActionHandle = (keyWord='') =>{
-      axios.get(`http://localhost:3001/api/items?q=${keyWord}`).then(response =>{
-          console.log(response.data);
-          setState(response.data);
-      })
+      dispatch(getProductsActionAsync(keyWord))
   }
+
   return(
       <div className={'box-search-container'}>
           <div className={'box-search-logo'}>

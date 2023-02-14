@@ -2,6 +2,7 @@ import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 import BoxSearchComponent from "./components/box-search/box-search.component";
+import HomeComponent from "./components/home/home.component";
 
 const App = () => {
 
@@ -9,7 +10,7 @@ const App = () => {
         <div className="App">
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<BoxSearchComponent/>}>
+                    <Route path="/" element={<HomeComponent/>}>
                     </Route>
                 </Routes>
                 {/*<Routes>*/}
