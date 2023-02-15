@@ -2,7 +2,8 @@ import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 import BoxSearchComponent from "./components/box-search/box-search.component";
-import HomeComponent from "./components/home/home.component";
+import HomeComponent from "./components/sections/home/home.component";
+import ResumeProductComponent from "./components/sections/resume-products/resume-product.component";
 
 const App = () => {
 
@@ -11,6 +12,10 @@ const App = () => {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<HomeComponent/>}>
+                    </Route>
+                </Routes>
+                <Routes>
+                    <Route path="/items" element={<ResumeProductComponent/>}>
                     </Route>
                 </Routes>
                 {/*<Routes>*/}

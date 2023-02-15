@@ -1,19 +1,14 @@
 import {useState} from "react";
 
 
-const SearchBarComponent = ({searchAction, placeHolderBar, containerStyle}) =>{
+const SearchBarComponent = ({searchAction, placeHolderBar}) =>{
 
     const [keyWord, setKeyWord]= useState('');
 
     const actionEnterKey = (event) =>{
         event.key === 'Enter' &&
-        searchAction(keyWord);}
-
-        // event.key === 'Enter' &&
-        // searchAction(keyWord);
-        // // searchAction(
-        //     event && event.target && event.target.value ? event.target.value : ''
-        // );
+        searchAction(keyWord);
+    }
 
     return(
         <div className="input-wrapper">

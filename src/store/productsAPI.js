@@ -1,11 +1,10 @@
-import axios from "axios";
+import {getProductListService} from "../service/product-service";
+
 
 export function fetchCount(keyWord) {
     return new Promise((resolve) => {
-            // setTimeout(() => resolve({data: amount}), 5000)
-            axios.get(`http://localhost:3001/api/items?q=${keyWord}`).then(response => {
-                // console.log(response.data);
-                resolve({data: response.data})
+        getProductListService(keyWord).then(response => {
+                resolve({data: response})
             })
         }
     );
