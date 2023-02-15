@@ -15,7 +15,6 @@ const BoxSearchComponent = () => {
   const searchActionHandle = (keyWord='') =>{
       dispatch(getProductsActionAsync(keyWord));
       navigate(`/items?search=${keyWord}`);
-
   }
 
   return(

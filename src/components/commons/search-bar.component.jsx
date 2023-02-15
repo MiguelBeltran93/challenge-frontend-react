@@ -1,21 +1,32 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 
 const SearchBarComponent = ({searchAction, placeHolderBar}) =>{
 
     const [keyWord, setKeyWord]= useState('');
+    const search = window.location.search;
+    const getParam = new URLSearchParams(search).get('search') || '';
+    console.log('getParam',getParam);
+
+    useEffect(()=>{
+        getParam !=='' && searchAction(getParam);
+    },[]);
+
+    const setKeyWordItem = (inputKeyWord) => {
+        inputKeyWord!==''&&
+        searchAction(inputKeyWord);
+    }
 
     const actionEnterKey = (event) =>{
-        event.key === 'Enter' &&
-        searchAction(keyWord);
+        event.key === 'Enter' && setKeyWordItem(keyWord);
     }
 
     return(
         <div className="input-wrapper">
             <input type="search" className="input" placeholder={placeHolderBar}
-                   onChange={event => {setKeyWord(event.target.value)}} onKeyDown={(event)=>{actionEnterKey(event)}}/>
+                   onChange={event => {setKeyWord(event.target.value)}} onKeyDown={(event)=>{actionEnterKey(event)}} defaultValue={getParam!==''?getParam:''}/>
 
-            <div onClick={()=>{searchAction(keyWord)}}>
+            <div onClick={()=>{setKeyWordItem(keyWord)}}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="input-icon" viewBox="0 0 20 20"
                      fill="currentColor">
                     <path
