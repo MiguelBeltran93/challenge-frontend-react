@@ -60,3 +60,37 @@
     height: 100%;
 
 }
+
+@media (max-width: 1250px) {
+    .resume-product-breadcrumb{
+        align-self: center;
+        width: 80%;
+    }
+
+    .resume-product-container{
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 12px;
+        width: 80%;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+    .resume-product-breadcrumb{
+        align-self: center;
+        width: 80%;
+    }
+    .resume-product-container{
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+    }
+
+}
+

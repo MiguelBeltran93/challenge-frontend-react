@@ -1,10 +1,9 @@
 import './App.css';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
-import BoxSearchComponent from "./components/box-search/box-search.component";
-import HomeComponent from "./components/sections/home/home.component";
-import ResumeProductComponent from "./components/sections/resume-products/resume-product.component";
-import DetailProductComponent from "./components/sections/detail-product/detail-product.component";
+import HomeComponent from './components/sections/home/home.component';
+import ResumeProductComponent from './components/sections/resume-products/resume-product.component';
+import DetailProductComponent from './components/sections/detail-product/detail-product.component';
 
 const App = () => {
 
@@ -24,7 +23,6 @@ const App = () => {
                     </Route>
                 </Routes>
             </BrowserRouter>
-
         </div>
     );
 }

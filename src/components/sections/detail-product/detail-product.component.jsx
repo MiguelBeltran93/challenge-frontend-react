@@ -1,4 +1,4 @@
-import BoxSearchComponent from "../../box-search/box-search.component";
+import BoxSearchComponent from "../../commons/box-search/box-search.component";
 import { useParams } from 'react-router';
 import {cleanState, getProductDetailActionAsync} from "../../../store";
 import {useDispatch, useSelector} from "react-redux";

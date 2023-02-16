@@ -1,5 +1,5 @@
-import ProductResumeComponent from "../../product-resume/product-resume.component";
-import BoxSearchComponent from "../../box-search/box-search.component";
+import ProductResumeComponent from '../../commons/product-resume/product-resume.component';
+import BoxSearchComponent from '../../commons/box-search/box-search.component';
 
 const ResumeProductComponent = () => {
 

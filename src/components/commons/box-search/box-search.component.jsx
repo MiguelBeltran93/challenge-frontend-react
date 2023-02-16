@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
-import SearchBarComponent from "../commons/search-bar.component";
+import SearchBarComponent from "../search-bar.component";
 import './box-search.component.css';
 import { useSelector, useDispatch } from 'react-redux';
-import {getProductsActionAsync} from "../../store";
+import {getProductsActionAsync} from "../../../store";
 import { useNavigate } from 'react-router-dom';
 
 const BoxSearchComponent = () => {

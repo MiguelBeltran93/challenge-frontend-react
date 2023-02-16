@@ -2,9 +2,9 @@ import {useDispatch, useSelector} from "react-redux";
 import './product-resume.component.css';
 import ProductResumeDataComponent from "./product-resume-data/product-resume-data.component";
 import {useEffect, useId} from "react";
-import BreadcrumbComponent from "../commons/breadcrumb/breadcrumb.component";
+import BreadcrumbComponent from "../breadcrumb/breadcrumb.component";
 import {useNavigate} from "react-router-dom";
-import {cleanState} from "../../store";
+import {cleanState} from "../../../store";
 
 const ProductResumeComponent = () => {
     const product = useSelector(state => state.product.value);
