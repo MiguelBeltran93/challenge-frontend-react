@@ -4,6 +4,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import BoxSearchComponent from "./components/box-search/box-search.component";
 import HomeComponent from "./components/sections/home/home.component";
 import ResumeProductComponent from "./components/sections/resume-products/resume-product.component";
+import DetailProductComponent from "./components/sections/detail-product/detail-product.component";
 
 const App = () => {
 
@@ -18,14 +19,10 @@ const App = () => {
                     <Route path="/items" element={<ResumeProductComponent/>}>
                     </Route>
                 </Routes>
-                {/*<Routes>*/}
-                {/*    <Route path="/redux" element={<CounterRedux/>}>*/}
-                {/*    </Route>*/}
-                {/*</Routes>*/}
-                {/*<Routes>*/}
-                {/*    <Route path="/axios" element={<CounterAxios/>}>*/}
-                {/*    </Route>*/}
-                {/*</Routes>*/}
+                <Routes>
+                    <Route path="/items/:id" element={<DetailProductComponent/>}>
+                    </Route>
+                </Routes>
             </BrowserRouter>
 
         </div>

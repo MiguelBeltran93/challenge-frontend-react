@@ -6,7 +6,6 @@ const SearchBarComponent = ({searchAction, placeHolderBar}) =>{
     const [keyWord, setKeyWord]= useState('');
     const search = window.location.search;
     const getParam = new URLSearchParams(search).get('search') || '';
-    console.log('getParam',getParam);
 
     useEffect(()=>{
         getParam !=='' && searchAction(getParam);

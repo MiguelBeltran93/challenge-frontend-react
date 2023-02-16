@@ -9,9 +9,6 @@ const BoxSearchComponent = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-
-    const [state, setState] = useState();
-
   const searchActionHandle = (keyWord='') =>{
       dispatch(getProductsActionAsync(keyWord));
       navigate(`/items?search=${keyWord}`);
@@ -19,7 +16,7 @@ const BoxSearchComponent = () => {
 
   return(
       <div className={'box-search-container'}>
-          <div className={'box-search-logo'}>
+          <div className={'box-search-logo'} onClick={()=>{navigate(`/`);}}>
           </div>
           <div className={'box-search-component'}>
               <SearchBarComponent searchAction={searchActionHandle} placeHolderBar={'Buscar productos, marcas y mas...'}/>

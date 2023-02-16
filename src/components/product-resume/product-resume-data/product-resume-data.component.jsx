@@ -1,13 +1,13 @@
-const ProductResumeDataComponent = ({product}) => {
+const ProductResumeDataComponent = ({product, id, action}) => {
 
     return(
         <>
-            <section className={'resume-product-item'}>
-                <picture className={'image-product-container'}>
-                    <img className={'image-product'} src={product && product?.picture}
-                         alt={`image about ${product && product.title}`}/>
+            <section id={`container-${id}`} className={'resume-product-item'}>
+                <picture id={`picture-${id}`} className={'image-product-container'} onClick={()=>{action(product?.id)}}>
+                    <img id={`img-${id}`} className={'image-product'} src={product && product?.picture}
+                         alt={`image about ${product && product.title}`} title={` ${product && product.title}`}/>
                 </picture>
-                <section className={'resume-product-section'}>
+                <section id={`resume-${id}`} className={'resume-product-section'}>
                     <div>
                         <strong>
                             {product && product.price.currency}
@@ -18,7 +18,7 @@ const ProductResumeDataComponent = ({product}) => {
                         <i className='fas fa-grin-beam icon' title={'envio gratis'}/>}
                     </div>
 
-                    <div className={'product-resume-text'}>
+                    <div id={`resume-text-${id}`} className={'product-resume-text'} onClick={()=>{action(product?.id)}}>
                         <span> {product && product.title}</span>
                     </div>
 
