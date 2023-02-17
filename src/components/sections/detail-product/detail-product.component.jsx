@@ -10,7 +10,6 @@ const DetailProductComponent = () => {
     const dispatch = useDispatch();
     const productDetail = useSelector(state => state.product.detail);
     const status = useSelector(state => state.product.status);
-    console.log('detalle status', status)
 
     const getProductDetail = () =>{
         dispatch(getProductDetailActionAsync(id));
@@ -24,7 +23,7 @@ const DetailProductComponent = () => {
     },[])
 
     return (
-        <section>
+        <section data-testid="detail-component-test">
             <BoxSearchComponent/>
             {status === 'loading' && <span>Cargando...</span> }
             {productDetail && <ProductDetailComponent productDetail={productDetail?.item}/>}

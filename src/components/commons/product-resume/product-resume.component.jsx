@@ -12,7 +12,6 @@ const ProductResumeComponent = () => {
     const id = useId();
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    console.log('resume status', status)
 
     const detailRedirection = (itemDetail) => {
         navigate(`/items/${itemDetail}`);

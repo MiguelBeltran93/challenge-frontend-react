@@ -8,7 +8,7 @@ import DetailProductComponent from './components/sections/detail-product/detail-
 const App = () => {
 
     return (
-        <div className="App">
+        <div className="App" data-testid="app-test">
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<HomeComponent/>}>
