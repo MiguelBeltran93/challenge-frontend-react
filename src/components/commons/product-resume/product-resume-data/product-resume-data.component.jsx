@@ -1,3 +1,6 @@
+import PropTypes from "prop-types";
+
+
 const ProductResumeDataComponent = ({product, id, action}) => {
 
     return(
@@ -27,5 +30,10 @@ const ProductResumeDataComponent = ({product, id, action}) => {
         </>
     )
 }
+
+ProductResumeDataComponent.propTypes = {
+    productDetail: PropTypes.object,
+    action: PropTypes.func,
+};
 
 export default ProductResumeDataComponent;

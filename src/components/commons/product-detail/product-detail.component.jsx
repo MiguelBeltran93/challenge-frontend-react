@@ -3,6 +3,8 @@ import {useSelector} from "react-redux";
 import {useId} from "react";
 import './product-detail.component.css'
 import {formatToMoney} from "../../utils";
+import PropTypes from "prop-types";
+
 
 const ProductDetailComponent = ({productDetail}) => {
     const product = useSelector(state => state.product.value);
@@ -51,5 +53,11 @@ const ProductDetailComponent = ({productDetail}) => {
         </section>
     )
 }
+
+
+ProductDetailComponent.propTypes = {
+    productDetail: PropTypes.object
+};
+
 
 export default ProductDetailComponent;

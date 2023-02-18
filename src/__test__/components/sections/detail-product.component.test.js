@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import DetailProductComponent from "../../../components/sections/detail-product/detail-product.component";
 import {renderWithProviders} from "../../test-utils";
-import {BrowserRouter, Route, Router, Routes} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 import {createMemoryHistory} from "history";
 
 describe('Meli challenge test detail component', () => {

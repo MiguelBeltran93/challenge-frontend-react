@@ -1,9 +1,6 @@
 import {render, screen} from '@testing-library/react';
-import DetailProductComponent from "../../../components/sections/detail-product/detail-product.component";
 import {renderWithProviders} from "../../test-utils";
 import {BrowserRouter, Route, Router, Routes} from 'react-router-dom';
-import {createMemoryHistory} from "history";
-import ProductDetailComponent from "../../../components/commons/product-detail/product-detail.component";
 import ResumeProductComponent from "../../../components/sections/resume-products/resume-product.component";
 
 describe('Meli challenge test detail component', () => {

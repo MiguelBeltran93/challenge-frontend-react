@@ -4,6 +4,7 @@ import {cleanState, getProductDetailActionAsync} from "../../../store";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import ProductDetailComponent from "../../commons/product-detail/product-detail.component";
+import {Helmet} from "react-helmet";
 
 const DetailProductComponent = () => {
     const { id } = useParams();
@@ -24,6 +25,10 @@ const DetailProductComponent = () => {
 
     return (
         <section data-testid="detail-component-test">
+            <Helmet>
+                <title>Detalle Producto</title>}
+                <meta name='description' content={'detalle de producto seleccionado resultado de la busqueda '} />
+            </Helmet>
             <BoxSearchComponent/>
             {status === 'loading' && <span>Cargando...</span> }
             {productDetail && <ProductDetailComponent productDetail={productDetail?.item}/>}
