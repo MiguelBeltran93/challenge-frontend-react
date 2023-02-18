@@ -15,10 +15,10 @@ const BoxSearchComponent = () => {
   }
 
   return(
-      <div className={'box-search-container'}>
-          <div className={'box-search-logo'} onClick={()=>{navigate(`/`);}}>
+      <div className={'box-search-container'} data-testid="box-search-component-test">
+          <div className={'box-search-logo'} onClick={()=>{navigate(`/`);}} data-testid="logo-box-search-component-test">
           </div>
-          <div className={'box-search-component'}>
+          <div className={'box-search-component'} >
               <SearchBarComponent searchAction={searchActionHandle} placeHolderBar={'Buscar productos, marcas y mas...'}/>
           </div>
       </div>

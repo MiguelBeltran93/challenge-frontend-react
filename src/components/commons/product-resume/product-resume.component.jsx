@@ -24,7 +24,7 @@ const ProductResumeComponent = () => {
     },[])
 
     return (
-        <section className={'resume-product'}>
+        <section className={'resume-product'} >
             {status === 'loading' && <span>Cargando...</span> }
             <section className={'resume-product-breadcrumb'}>
                 <BreadcrumbComponent breadcrumbData={product?.categories}/>

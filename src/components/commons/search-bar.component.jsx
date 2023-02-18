@@ -21,11 +21,11 @@ const SearchBarComponent = ({searchAction, placeHolderBar}) =>{
     }
 
     return(
-        <div className="input-wrapper">
-            <input type="search" className="input" placeholder={placeHolderBar}
+        <div className="input-wrapper" data-testid="search-bar-component-test">
+            <input data-testid="search-bar-input-component-test" type="search" className="input" placeholder={placeHolderBar}
                    onChange={event => {setKeyWord(event.target.value)}} onKeyDown={(event)=>{actionEnterKey(event)}} defaultValue={getParam!==''?getParam:''}/>
 
-            <div onClick={()=>{setKeyWordItem(keyWord)}}>
+            <div onClick={()=>{setKeyWordItem(keyWord)}} data-testid="search-bar-button-component-test">
                 <svg xmlns="http://www.w3.org/2000/svg" className="input-icon" viewBox="0 0 20 20"
                      fill="currentColor">
                     <path

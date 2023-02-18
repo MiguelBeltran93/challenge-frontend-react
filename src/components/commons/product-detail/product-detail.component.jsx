@@ -10,7 +10,7 @@ const ProductDetailComponent = ({productDetail}) => {
 
 
     return(
-        <section className={'detail-product'}>
+        <section className={'detail-product'} data-testid="resume-component-test">
             <section className={'detail-product-breadcrumb'}>
                 <BreadcrumbComponent breadcrumbData={product?.categories}/>
             </section>

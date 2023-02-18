@@ -4,7 +4,7 @@ import BoxSearchComponent from '../../commons/box-search/box-search.component';
 const ResumeProductComponent = () => {
 
     return (
-        <section>
+        <section data-testid="resume-component-test">
             <BoxSearchComponent/>
             <ProductResumeComponent/>
         </section>

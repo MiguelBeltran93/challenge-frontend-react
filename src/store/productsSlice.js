@@ -31,14 +31,10 @@ export const productsSlice = createSlice({
       state.value = '';
       state.detail = '';
     },
-    replaceState: (state,action) => {
-      state.value = action.payload;
-    },
   },
   extraReducers: (builder) => {
     builder
       .addCase(getProductsActionAsync.pending, (state) => {
-        console.log('entraaaaa')
         state.status = 'loading';
       })
       .addCase(getProductsActionAsync.fulfilled, (state, action) => {
@@ -54,7 +50,7 @@ export const productsSlice = createSlice({
   },
 });
 
-export const { cleanState, replaceState } = productsSlice.actions;
+export const { cleanState } = productsSlice.actions;
 
 
 

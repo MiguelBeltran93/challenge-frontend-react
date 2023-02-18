@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage --watchAll=false --env=jsdom ",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -53,6 +53,20 @@
     },
     "transformIgnorePatterns": [
       "<rootDir>/node_modules/(?!axios)/"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/src/index.js",
+      "!<rootDir>/src/i18n.js",
+      "!<rootDir>/src/store/store.js",
+      "!<rootDir>/src/reportWebVitals.js",
+      "!<rootDir>/src/setupProxy.js",
+      "!<rootDir>/src/service/http/wrapper.js",
+      "!<rootDir>/src/service/http/utils.js",
+      "!<rootDir>/src/service/http/WrapperErrorResponse.js",
+      "!<rootDir>/src/service/http/WrapperSuccessResponse.js",
+      "!<rootDir>/src/service/product-service.js"
     ]
   }
 }
